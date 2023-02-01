@@ -1,0 +1,74 @@
+.footerContainer {
+    width: 100%;
+    margin-top: 50px;
+    border-top: solid 0.5px black;
+    padding: 10px;
+}
+
+.footerContainer .groupOne {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+}
+
+.footerContainer .groupOne .box {
+    border-right: double black 2px ;
+}
+
+.footerContainer .groupOne .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footerContainer .groupOne .box figure a img{
+    width: 180px;
+}
+
+.footerContainer .groupOne .box h2 {
+    margin-bottom: 40px;
+    font-size: 3.5em;
+    font-family: 'Aboreto', cursive;
+}
+
+.footerContainer .groupOne .box p {
+    font-size: 2.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footerContainer .groupOne .box .networksFooter a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5em;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: black;
+    text-align: center;
+    transition: all 300ms ease;
+
+}
+
+.footerContainer .groupOne .box .networksFooter a:hover {
+    color: aqua;
+}
+
+.footerContainer .groupTwo {
+    padding: 15px 10px;
+    text-align: center;
+    border-top: 3px solid black;
+
+}
+
+.footerContainer .groupTwo small {
+    font-size: 2em;
+}

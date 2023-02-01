@@ -1,0 +1,63 @@
+.indexBoxLoggin {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+    .indexBoxLoggin h2{
+
+        font-family: 'Aboreto', cursive;
+        font-size: 3.5em;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .indexBoxLoggin .indexButtons {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+            .indexBoxLoggin .indexButtons button {
+                background: linear-gradient(102deg, #03001C 40%, #020000 60%);
+                color: #fff;
+                display: inline-block;
+                padding: 1rem 2rem;
+                border-radius: .25rem;
+                min-width: 200px;
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+                animation: pulse 1.5s infinite;
+                margin-right: 15px;
+                font-size: 1.8em;
+            }
+
+            .indexBoxLoggin .indexButtons button:hover {
+
+                cursor: pointer;
+
+            
+            }
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, .1);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(256, 256, 256, 0);
+    }
+
+    100% {
+        transform: scale(.99);
+        box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+    }
+}
