@@ -1,0 +1,109 @@
+.navStyleFootball{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+    height: 8vh;
+    border-bottom: solid #fff 0.7px;
+}
+
+
+    .navStyleFootball .navBrandFootball img{
+        text-transform: uppercase;
+        font-weight: bold;
+        height: 54px;
+    }
+
+    .navStyleFootball .navMenuFootball {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 4rem;
+    }
+        .navStyleFootball .navMenuFootball .navLinkFootball{
+            font-size: 2.8rem;
+            color: #fff;
+            position: relative;
+            font-family: 'Aboreto', cursive;
+            text-decoration: none;
+            list-style: none;
+            font-weight: 900;
+        }
+            .navStyleFootball .navMenuFootball .navLinkFootball::before, .navStyleFootball .navMenuFootball .navLinkFootball::after {
+                border-bottom: solid 2px #fff;
+                position: absolute;
+                content: "";
+                opacity: 0;
+                transition: 0.3s;
+            }
+        
+            .navStyleFootball .navMenuFootball .navLinkFootball::before {
+                bottom: -5px;
+                width: 90%;
+                right: 0;
+            }
+        
+            .navStyleFootball .navMenuFootball .navLinkFootball::after {
+                bottom: -10px;
+                left: 0;
+                width: 60%;
+            }
+        
+            .navStyleFootball .navMenuFootball .navLinkFootball:hover::before {
+                opacity: 1;
+                width: 70%;
+            }
+        
+            .navStyleFootball .navMenuFootball .navLinkFootball:hover::after {
+                opacity: 1;
+                width: 40%;
+        }
+        
+
+    .navStyleFootball .navToggler div{
+        width: 2.5rem;
+        height: 0.2rem;
+        margin: 0.4rem;
+        background-color: black;
+        transition: 0.4s ease-in;
+    }
+
+    .navStyleFootball .navToggler {
+        cursor: pointer;
+        display: none;
+    }
+
+@media (max-width: 768px) {
+
+.navStyleFootball .navToggler {
+    display: block;
+}
+
+.navStyleFootball .navMenuFootball {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    width: 50%;
+    height: 93vh;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+}
+
+}
+
+
+.navStyleFootball .navActive {
+    transform: translateX(0);
+}
+
+.navStyleFootball .toggle .lineOne {
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
+.navStyleFootball .toggle .lineTwo {
+    opacity: 0;
+}
+.navStyleFootball .toggle .lineThree {
+    transform: rotate(45deg) translate(-4px, -5px);
+}

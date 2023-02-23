@@ -1,0 +1,7 @@
+.headerStyle {
+    background-image: url("./assets/fondoHeader.jpeg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

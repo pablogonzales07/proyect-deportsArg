@@ -1,0 +1,42 @@
+.sportStyleContainer {
+    width: 400px;
+    height: 400px;
+    margin: 25px;
+    border: black solid 2px;
+}
+
+    .sportStyleContainer img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sportStyleContainer .sportCardText {
+        z-index: 1;
+        position: relative;
+        bottom: 22vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+            .sportStyleContainer .sportCardText h3{
+                font-size: 5em;
+                font-family: 'Aboreto', cursive;
+                color: #fff;
+                font-weight: 900;
+
+            }
+
+            .sportStyleContainer .sportCardText a button {
+                background: linear-gradient(102deg, #03001C 40%, #020000 60%);
+                color: #fff;
+                display: inline-block;
+                padding: 1rem 2rem;
+                border-radius: .25rem;
+                min-width: 200px;
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+                animation: pulse 1.5s infinite;
+                margin-right: 15px;
+                font-size: 1.8em;
+            }

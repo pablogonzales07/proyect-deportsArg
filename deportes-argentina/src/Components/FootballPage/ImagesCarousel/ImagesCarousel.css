@@ -1,0 +1,9 @@
+.sliderFootballItem {
+    padding: 2rem; 
+}
+
+    .sliderFootballItem img {
+        height: 400px;
+        max-width: 600px;
+        pointer-events: none;
+    }

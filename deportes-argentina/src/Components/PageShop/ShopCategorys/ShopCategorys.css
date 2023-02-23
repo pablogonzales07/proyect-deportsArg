@@ -1,0 +1,50 @@
+.boxCategorysConteiner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 5px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+        .boxCategorysConteiner .boxCategorysTitle h5{
+            margin: 0 0 15px;
+            padding: 0 0 12px;
+            border-bottom: 1px solid #e3e9ef;
+            font-size: 2.3em;
+            text-transform: uppercase;
+            font-weight: 600;
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            color: #02010a;       
+        }
+
+
+        .boxCategorysConteiner .boxCategorysItem ul li{
+            margin-top: 15px;
+      
+        }
+
+        .boxCategorysConteiner .boxCategorysItem ul li button{
+            font-size: 2.3em;       
+            color: #02010a;  
+            font-family: 'Poppins', sans-serif;
+            border: none;
+            background: transparent;
+
+        }
+
+        .boxCategorysConteiner .boxCategorysItem ul li button:hover {
+            font-weight: 800;
+            color: aqua;
+            cursor: pointer;
+        }
+button {
+    color: #02010a;
+}

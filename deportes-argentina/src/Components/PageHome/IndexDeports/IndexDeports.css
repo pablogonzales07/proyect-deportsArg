@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    .deportsCartsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}

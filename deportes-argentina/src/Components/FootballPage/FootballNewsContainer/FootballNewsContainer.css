@@ -1,0 +1,46 @@
+.footballHomeContainer {
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+    
+}
+
+    .footballNewsContainer {
+        width: 70%;
+        border-right: solid black 3px ;
+    }
+
+        .footballNewsContainer h1 {
+            font-size: 4em;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-family: 'Aboreto', cursive;
+        }
+
+    .asideFootballStyle{
+        width: 30%;
+    }
+
+        .asideFootballStyle h3{
+            font-size: 4em;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-family: 'Aboreto', cursive;
+        }
+
+         .asideFootballStyle p {
+            font-size: 3em;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            padding: 15px;
+         }
+
+         .asideFootballStyle h6{
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 60px;
+            margin-top: 60px;
+            font-family: 'Aboreto', cursive;
+         }

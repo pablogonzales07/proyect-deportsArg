@@ -1,0 +1,19 @@
+.sliderFootballContainer {
+    width: 70%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+    .sliderFootballContainer h2 {
+        font-size: 4em;
+        letter-spacing: 4px;
+        font-family: 'Aboreto', cursive;
+        text-align: center;
+        margin-bottom: 60px;
+
+    }
+
+    .sliderFootballContainer .sliderFootball {
+        display: flex;
+        cursor: grab;
+    }

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+.boxOfert {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+    .boxOfert b {
+        font-size: 10em;
+    }
+
+    .boxOfert .boxOfertText h3 {
+
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .boxOfert .boxOfertText p {
+
+        font-size: 2.3em;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;;
+        margin-top: 20px;
+        padding: 20px;
+
+
+    }
+
+
+@media (max-width: 768px) {
+
+    .boxOfert {
+        width: 40%;
+    }
+
+    .boxOfert b {
+        font-size: 7em;
+    }
+
+    .boxOfert .boxOfertText p {
+        padding: 10px;
+    }
+
+
+}
+
+@media (max-width: 450px){
+
+    .boxOfert {
+        width: 100%;
+    }
+
+}

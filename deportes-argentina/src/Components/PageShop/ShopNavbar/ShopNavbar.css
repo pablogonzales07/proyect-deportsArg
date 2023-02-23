@@ -1,0 +1,104 @@
+.navShopStyle{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8vh;
+    background-color: #95BDFF;
+}
+
+    .navShopStyle .navShopBrand img{
+        text-transform: uppercase;
+        font-weight: bold;
+        height: 54px;
+    }
+
+    .navShopStyle .navShopMenu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 3rem;
+    }
+        .navShopStyle .navShopMenu .navShopLink{
+            font-size: 2.5em;
+            color: black;
+            position: relative;
+            font-family: 'Aboreto', cursive;
+            font-weight: 900;
+        }
+            .navShopStyle .navShopMenu .navShopLink::before, .navShopStyle .navShopMenu .navShopLink::after {
+                border-bottom: solid 2px black;
+                position: absolute;
+                content: "";
+                opacity: 0;
+                transition: 0.3s;
+            }
+        
+            .navShopStyle .navShopMenu .navShopLink::before {
+                bottom: -5px;
+                width: 90%;
+                right: 0;
+            }
+        
+            .navShopStyle .navShopMenu .navShopLink::after {
+                bottom: -10px;
+                left: 0;
+                width: 60%;
+            }
+        
+            .navShopStyle .navShopMenu .navShopLink:hover::before {
+                opacity: 1;
+                width: 70%;
+            }
+        
+            .navShopStyle .navShopMenu .navShopLink:hover::after {
+                opacity: 1;
+                width: 40%;
+        }
+        
+
+    .navShopStyle .navToggler div{
+        width: 2.5rem;
+        height: 0.2rem;
+        margin: 0.4rem;
+        background-color: black;
+        transition: 0.4s ease-in;
+    }
+
+    .navShopStyle .navToggler {
+        cursor: pointer;
+        display: none;
+    }
+
+@media (max-width: 768px) {
+
+.navShopStyle .navToggler {
+    display: block;
+}
+
+.navShopStyle .navShopMenu {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    width: 50%;
+    height: 93vh;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+}
+
+}
+
+
+.navShopStyle .navActive {
+    transform: translateX(0);
+}
+
+.navShopStyle .toggle .lineOne {
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
+.navShopStyle .toggle .lineTwo {
+    opacity: 0;
+}
+.navShopStyle .toggle .lineThree {
+    transform: rotate(45deg) translate(-4px, -5px);
+}

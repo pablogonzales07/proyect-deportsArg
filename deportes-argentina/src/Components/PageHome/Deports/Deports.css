@@ -1,0 +1,39 @@
+.cartDeport {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    border: solid 1px black;
+}
+
+        .cartDeport:hover {
+            cursor: pointer;
+            transform: scale(1.1, 1.1);
+            transition: transform 1.5s;
+        }
+
+        .cartDeport b {
+            font-size: 10em;
+            padding: 15px;
+        }
+
+        .cartDeport h3 {
+            font-size: 3.3em;
+            padding: 10px;
+            text-align: center;
+            border-top: solid 0.5px black;
+            font-family: 'Archivo', sans-serif;
+    
+}
+
+@media (max-width: 768px) {
+
+    .cartDeport {
+        width: 40%;
+        margin: 10px;
+    }
+}
+

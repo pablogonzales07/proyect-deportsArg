@@ -1,0 +1,14 @@
+.boxShopConteiner {
+    width: 100%;
+    display: flex;
+    margin-top: 80px;
+}
+
+    .boxShopConteiner .boxShopFilter {
+        width: 30%;
+
+    }
+
+    .boxShopConteiner .boxShopProducts {
+        width: 70%;
+    }

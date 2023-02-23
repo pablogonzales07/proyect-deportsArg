@@ -1,0 +1,56 @@
+.indexNewsContainer {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.indexNewsContainer .indexNewsStyle {
+    width: 70%;
+}
+
+.indexNewsContainer .indexNewsStyle  h2 {
+    font-size: 4em;
+    font-family: 'Aboreto', cursive;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.indexNewsContainer .indexDeports {
+    width: 30%;
+    border-left: solid black 1px;
+}
+
+.indexNewsContainer .indexDeports h2{
+    font-size: 4em;
+    font-family: 'Aboreto', cursive;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+
+    .indexNewsContainer{
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .indexNewsContainer .indexNewsStyle {
+        width: 100%;
+    }
+
+    .indexNewsContainer .indexDeports {
+        width: 100%;
+        border-left: none;
+        margin-top: 60px;
+    }
+
+    .indexNewsContainer .indexDeports h2{ 
+        margin-bottom: 60px;
+    }
+
+}

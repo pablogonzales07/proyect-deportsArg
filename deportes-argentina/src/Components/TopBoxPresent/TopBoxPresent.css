@@ -1,0 +1,45 @@
+.topBoxStyle {
+    display: flex;
+    justify-content: space-between;
+    background-color: #BDCDD6;
+    padding: 15px;
+}
+
+    .topBoxStyle h3 {
+        color: #fff;
+        font-size: 1.8em;
+        margin-left: 20px;
+        font-family: 'Aboreto', cursive;
+        font-weight: 800;
+    }
+
+    .topBoxStyle .buttonsTopBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .topBoxStyle .buttonsTopBox button {
+            cursor: pointer;
+            height: 25px;
+            border-radius: 4px;
+            width: 118px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: 500;
+            font-size: 14px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(21, 30, 36);
+            text-transform: uppercase;
+        }
+
+        .topBoxStyle .buttonsTopBox h3 {
+            font-size: 2em;
+        }
+
+
+
+
