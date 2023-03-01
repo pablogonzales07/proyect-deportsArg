@@ -1,11 +1,16 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom"
+import { filterProducts } from "../../../actions/productsAction";
+import { FILTER_PRODUCTS } from "../../../types";
 import "./ShopNavbar.css"
 
 const ShopNavbar = () => {
 
     const [active, setActive] = useState("navShopMenu");
     const [toggleIcon, setToggleIcon ] = useState("navToggler");
+    const dispatch = useDispatch();
+
   
     
     const navToggle = () => {
@@ -18,6 +23,11 @@ const ShopNavbar = () => {
        : setToggleIcon("navToggler")
     }
 
+    const onItemClick = (e) => {
+        const valueLink = e.target.innerHTML.toLowerCase()
+        dispatch( filterProducts( { value: valueLink, filterType: "sport"  } ) )
+    }
+
   return (
     <nav className="navShopStyle">         
             <Link to="/" className='navShopBrand'>
@@ -28,25 +38,25 @@ const ShopNavbar = () => {
                     <Link to="/" className='navShopLink'>HOME</Link>
                 </li>
                 <li className="navShopItem">
-                    <Link to="/shop" className='navShopLink'>INICIO</Link>
+                    <a className='navShopLink' onClick={ onItemClick }>INICIO</a>
                 </li>
                 <li className="navShopItem">
-                    <Link  to="/shop/futbol" className='navShopLink'>FUTBOL</Link>
+                    <a className='navShopLink' onClick={ onItemClick }>FUTBOL</a>
                 </li>
                 <li className="navShopItem">
-                    <Link to="/shop/basket" className='navShopLink'>BASKET</Link>
+                    <a  className='navShopLink' onClick={ onItemClick }>BASKET</a>
                 </li>
                 <li className="navShopItem">
-                    <Link to="/shop/handball" className='navShopLink'>HANDBALL</Link>
+                    <a className='navShopLink' onClick={ onItemClick }>HANDBALL</a>
                 </li>
                 <li className="navShopItem">
-                    <Link to="/shop/rugby" className='navShopLink'>RUGBY</Link>
+                    <a  className='navShopLink' onClick={ onItemClick }>RUGBY</a>
                 </li>
                 <li className="navShopItem">
-                    <Link to="/shop/voley" className='navShopLink'>VOLEY</Link>
+                    <a className='navShopLink' onClick={ onItemClick }>VOLEY</a>
                 </li>
                 <li className="navShopItem">
-                    <Link to="/shop/hockey" className='navShopLink'>HOCKEY</Link>
+                    <a  className='navShopLink' onClick={ onItemClick }>HOCKEY</a>
                 </li>
             </ul>
             <div onClick={ navToggle } className={ toggleIcon }>

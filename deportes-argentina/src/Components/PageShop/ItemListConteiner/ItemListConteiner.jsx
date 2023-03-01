@@ -1,16 +1,28 @@
-
-import { useProductsContext } from "../../../context/ProductsContextProvider"
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { getProducts } from "../../../actions/productsAction"
 import ItemList from "../ItemList/ItemList"
 import ShopCategorys from "../ShopCategorys/ShopCategorys"
-import ShopLoading from "../ShopLoading/ShopLoading"
 import ShopNavbar from "../ShopNavbar/ShopNavbar"
 import ShopPriceFilter from "../ShopPriceFilter/ShopPriceFilter"
 import ShopSearch from "../ShopSearch/ShopSearch"
 import "./ItemListConteiner.css"
 
 const ItemListConteiner = () => {
+
+  const products = useSelector(state => {
+    console.log(state);
+    return state.filterProducts
+  
+});
+  const dispatch = useDispatch();
+
     
- const { products, loadingProducts } = useProductsContext();
+useEffect(() => {
+  dispatch(getProducts())
+}, [])
+
+
 
  
   return (
@@ -22,12 +34,8 @@ const ItemListConteiner = () => {
           <ShopCategorys />
           <ShopPriceFilter />
         </article>
-        <article className="boxShopProducts">
-
-            {
-                  loadingProducts ? <ShopLoading /> : <ItemList products={ products } />
-            }
-
+        <article className="boxShopProducts">     
+            { products.length && <ItemList products={ products } /> }
         </article>
       </section>
     </div>

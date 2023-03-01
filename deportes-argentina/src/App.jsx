@@ -1,3 +1,4 @@
+import { Provider } from 'react-redux'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import FootballTeamContainer from './Components/FootballPage/FootballTeamContainer/FootballTeamContainer'
@@ -12,7 +13,8 @@ import SportsHeader from './Components/PageSports/SportsHeader/SportsHeader'
 import SportsList from './Components/PageSports/SportsList/SportsList'
 import SportsPageList from './Components/PageSports/SportsPageList/SportsPageList'
 import TopBoxPresent from './Components/TopBoxPresent/TopBoxPresent'
-import { ProductsContextProvider } from './context/ProductsContextProvider'
+import store from './Store'
+
 
 
 
@@ -26,7 +28,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <ProductsContextProvider>
+        <Provider store={ store }>             
             <TopBoxPresent />
             <Routes>
               <Route path='/' element={ <> <Header /> <IndexBoxPresent /> <OfertsContainer /> <IndexButtonsRegist /> <NewsContainer />  </> }/>
@@ -40,7 +42,7 @@ function App() {
               <Route path=''/>
             </Routes>
             <Footer />
-        </ProductsContextProvider>
+        </Provider>
       </BrowserRouter>
     </>
   )

@@ -1,8 +1,15 @@
-import { useProductsContext } from "../../../context/ProductsContextProvider";
+import { useDispatch } from "react-redux"
+import { filterProducts } from "../../../actions/productsAction"
 import "./ShopCategorys.css"
 
 const ShopCategorys = ( ) => {
 
+   const dispatch = useDispatch()
+
+    const onClickCategory = ( e ) => {
+        const valueLink = e.target.innerHTML.toLowerCase()
+        dispatch( filterProducts( { value: valueLink, filterType: "category"  } ) )
+    }
 
   return (
     <div className="boxCategorysConteiner">
@@ -12,16 +19,16 @@ const ShopCategorys = ( ) => {
         <div className="boxCategorysItem">
             <ul>
                 <li>
-                    <button href="" >Remeras</button>
+                    <button onClick={ onClickCategory } href="" >Remera</button>
                 </li>
                 <li>
-                    <button href="" >Pantalones</button>
+                    <button onClick={ onClickCategory } href="" >Pantalon</button>
                 </li>
                 <li>
-                    <button href="" >Medias</button>
+                    <button onClick={ onClickCategory } href="" >Medias</button>
                 </li>
                 <li>
-                    <button href="" >Buzos</button>
+                    <button onClick={ onClickCategory } href="" >Buzos</button>
                 </li>
             </ul>
         </div>
