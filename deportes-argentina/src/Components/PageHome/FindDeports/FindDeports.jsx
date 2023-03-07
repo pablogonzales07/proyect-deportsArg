@@ -1,6 +1,19 @@
+import { useState } from "react"
 import "./FindDeports.css"
 
 const FindDeports = () => {
+
+  const [sportName, setSportName] = useState("")
+
+  const handleSubmit = ( e ) => {
+    e.preventDefault();
+    alert("Gracias por enviar su respuesta")
+     
+  }
+  
+
+  console.log(sportName);
+
   return (
     <div className="findDeportContainer">
         <h3>¿No encontras el deporte de tu interes?</h3>
@@ -10,9 +23,17 @@ const FindDeports = () => {
         </p>
         <div className="formDeports">
             <h4>Envianos el deporte que quieras que complementemos</h4>
-            <form action="">
-                <input className="inputFormDeport" type="text" name="text" placeholder="Ingrese el deporte" />
-                <input className="buttonSendDeport" type="submit" value={ "ENVIAR" }/>
+            <form onSubmit={ handleSubmit }>
+                <input 
+                  className="inputFormDeport" 
+                  type="text" 
+                  id="sportName" 
+                  name="sportName" 
+                  placeholder="Ingrese el deporte" 
+                  value={ sportName }
+                  onChange={ (e) => setSportName(e.target.value) }
+                />
+                <input className="buttonSendDeport" type="submit" value={ "ENVIAR" }  />
             </form>
         </div>
    

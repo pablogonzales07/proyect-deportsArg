@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto:wght@300&display=swap');
-
 .ofertBoxContainer {
     width: 70%;
     margin: 0 auto;
@@ -10,10 +8,9 @@
 .ofertBoxContainer h2 {
         font-size: 4em;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 50px;
         font-family: 'Aboreto', cursive;
-        font-weight: 900;
-        margin-bottom: 30px;
+        font-weight: 900
     }
 
 .ofertBoxContainer .ofertsContainerStyle {
@@ -21,6 +18,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 

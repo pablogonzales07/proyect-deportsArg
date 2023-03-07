@@ -8,53 +8,27 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:#BAD7E940
+
 
 }
-
     .boxOfert b {
         font-size: 10em;
     }
 
     .boxOfert .boxOfertText h3 {
-
         font-size: 3em;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        padding: 10px;
     }
-
     .boxOfert .boxOfertText p {
-
         font-size: 2.3em;
         text-align: center;
         font-family: 'Roboto', sans-serif;;
-        margin-top: 20px;
-        padding: 20px;
-
-
+        margin-top: 10px;
     }
 
 
-@media (max-width: 768px) {
-
-    .boxOfert {
-        width: 40%;
-    }
-
-    .boxOfert b {
-        font-size: 7em;
-    }
-
-    .boxOfert .boxOfertText p {
-        padding: 10px;
-    }
-
-
-}
-
-@media (max-width: 450px){
-
-    .boxOfert {
-        width: 100%;
-    }
-
-}

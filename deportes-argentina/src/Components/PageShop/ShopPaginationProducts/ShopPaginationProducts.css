@@ -1,0 +1,22 @@
+.paginationProductsItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+        .paginationProductsItems button {
+            margin-right: 10px;
+            font-size: 2.3em;
+            height: 40px;
+            width: 40px;
+            background-color: #101010;
+            color: #fff; 
+        }
+
+        .paginationProductsItems button.active {
+            font-size: 900;
+            border-color: #101010;
+            background: #ffe400;
+            color: #101010;
+
+        }

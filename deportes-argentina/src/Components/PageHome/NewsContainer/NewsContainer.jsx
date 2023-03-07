@@ -2,7 +2,9 @@ import { collection, getDocs, getFirestore} from "firebase/firestore"
 import { useState } from "react";
 import { useEffect } from "react";
 import FindDeports from "../FindDeports/FindDeports";
-import IndexDeports from "../IndexDeports/IndexDeports";
+import HomeSponsorsContainer from "../HomeSponsorsContainer/HomeSponsorsContainer";
+import HomeSponsors from "../HomeSponsorsContainer/HomeSponsorsContainer";
+import IndexSports from "../IndexSports/IndexSports";
 import Loading from "../Loading/Loading";
 import News from "../News/News";
 import "./NewsContainer.css"
@@ -14,6 +16,7 @@ const NewsContainer = () => {
 
 const [news, setNews] = useState( [] );
 const [loading, setLoading] = useState(true);
+
 
 useEffect ( () => {
   const db = getFirestore();
@@ -34,22 +37,30 @@ useEffect ( () => {
                 : 
                   <div className="indexNewsContainer">
                         <div className="indexNewsStyle">
-                          <h2>Noticias</h2>
+                          <div className="titleNewsBox">
+                            <img src="/assets/titleFond.png" alt="" />
+                            <h2>Noticias</h2>
+                          </div>                          
                           <div className="indexNews">
                             <News news={ news } />
                           </div>
+                          <div>
+                            <HomeSponsorsContainer />
+                          </div>
                         </div>
                         <div className="indexDeports">
-                          <h2>Deportes</h2>
+                        <div className="titleNewsBox">
+                            <img src="/assets/titleFond.png" alt="" />
+                            <h2>Deportes</h2>
+                          </div>          
                           <div className="indexDeportsSyle">
-                            <IndexDeports  /> 
+                            <IndexSports  /> 
                           </div>
                           <div className="findDeports">
                             <FindDeports />
                           </div>
                         </div>
                  </div>
-
        }
 
     </>

@@ -1,0 +1,11 @@
+.sponsorsBoxStyle {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+ 
+}
+
+    .sponsorsBoxStyle img {
+        width: 100%;
+        height: 100%
+    }

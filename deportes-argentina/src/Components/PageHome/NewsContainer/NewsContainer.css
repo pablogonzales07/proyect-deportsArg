@@ -1,56 +1,60 @@
 .indexNewsContainer {
     width: 100%;
     display: flex;
-    margin: 0 auto;
-    padding: 20px;
-
+    padding: 10px;
 }
 
-.indexNewsContainer .indexNewsStyle {
-    width: 70%;
-}
+        .indexNewsContainer .indexNewsStyle {
+            width: 70%;
+        }
 
-.indexNewsContainer .indexNewsStyle  h2 {
-    font-size: 4em;
-    font-family: 'Aboreto', cursive;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
-    text-align: center;
-}
+                .indexNewsContainer .indexNewsStyle .titleNewsBox img {
+                    width: 140px;
+                    height: 80px;
+                    position: relative;
+                    right: -6vh;
+                }
 
-.indexNewsContainer .indexDeports {
-    width: 30%;
-    border-left: solid black 1px;
-}
+                .indexNewsContainer .indexNewsStyle .titleNewsBox h2 {
+                    position: relative;
+                    top: -7vh;
+                    font-size: 4em;
+                    font-family: 'Aboreto', cursive;
+                    letter-spacing: 3px;
+                }
 
-.indexNewsContainer .indexDeports h2{
-    font-size: 4em;
-    font-family: 'Aboreto', cursive;
-    letter-spacing: 3px;
-    margin-bottom: 40px;
-    text-align: center;
-}
+                .indexNewsContainer .indexNewsStyle .indexNews{
+                    border-bottom: solid 1px black;
+                    padding-bottom: 20px;
+                }
 
+                .indexNewsContainer .indexNewsStyle  h2 {
+                    font-size: 4em;
+                    font-family: 'Aboreto', cursive;
+                    letter-spacing: 3px;
+                }
 
-@media (max-width: 768px) {
+        .indexNewsContainer .indexDeports {
+            width: 30%;
+            border-left: solid black 1px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .indexNewsContainer{
-        display: inline-block;
-        padding: 10px;
-    }
+                .indexNewsContainer .indexDeports .titleNewsBox img {
+                    width: 140px;
+                    height: 80px;
+                    position: relative;
+                    right: -6vh;
+                }
 
-    .indexNewsContainer .indexNewsStyle {
-        width: 100%;
-    }
+                .indexNewsContainer .indexDeports .titleNewsBox h2 {
+                    position: relative;
+                    top: -7vh;
+                    font-size: 4em;
+                    font-family: 'Aboreto', cursive;
+                    letter-spacing: 3px;
+                }
 
-    .indexNewsContainer .indexDeports {
-        width: 100%;
-        border-left: none;
-        margin-top: 60px;
-    }
-
-    .indexNewsContainer .indexDeports h2{ 
-        margin-bottom: 60px;
-    }
-
-}
