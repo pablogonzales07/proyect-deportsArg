@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { getProducts } from "../../../actions/productsAction"
+import { filterPriceProducts, filterProducts, getProducts, searchProducts } from "../../../actions/productsAction"
 import ItemList from "../ItemList/ItemList"
+import ShopAlert from "../ShopAlert/ShopAlert"
 import ShopCategorys from "../ShopCategorys/ShopCategorys"
 import ShopNavbar from "../ShopNavbar/ShopNavbar"
 import ShopPaginationProducts from "../ShopPaginationProducts/ShopPaginationProducts"
@@ -31,19 +32,48 @@ const firstPostIndex = lastPostIndex - postPerPage;
 
 const currentPosts = products.slice( firstPostIndex, lastPostIndex )
 
- 
+ const onSearch = ( productSearchFilter ) => {
+
+  if(productSearchFilter) {
+    dispatch( searchProducts( productSearchFilter ) )
+  }
+  else {
+    dispatch( searchProducts() )
+  }
+
+ }
+
+ const onSearchPrice = ( priceMax, priceMin ) => {
+  if(priceMax && priceMin){
+    dispatch( filterPriceProducts( { priceMax: priceMax, priceMin: priceMin  } ) )
+  }
+  else if(!priceMax) {
+    dispatch( filterPriceProducts( {priceMin: priceMin} ) )
+  }
+  else if(!priceMin){
+    dispatch(filterPriceProducts( { priceMax: priceMax } ))
+  }
+  else {
+    dispatch( filterPriceProducts() )
+  }
+
+ }
+
+
   return (
     <div>
       <ShopNavbar />
       <section className="boxShopConteiner">
         <article className="boxShopFilter">
-          <ShopSearch />
+          <ShopSearch shopSearch={ onSearch } />
           <ShopCategorys />
-          <ShopPriceFilter />
+          <ShopPriceFilter priceSearch={ onSearchPrice } />
         </article>
-        <article className="boxShopProducts">     
-            { products.length && <ItemList products={ currentPosts } /> }
-            <ShopPaginationProducts totalPosts={ products.length } postsPerPage={ postPerPage } setCurrentPage={ setCurrentPage } currentPage={ currentPage } />           
+        <article className="boxShopProducts">
+          {
+            products.length ? <ItemList products={ currentPosts } /> : <ShopAlert />
+          }     
+          <ShopPaginationProducts totalPosts={ products.length } postsPerPage={ postPerPage } setCurrentPage={ setCurrentPage } currentPage={ currentPage } />           
         </article>
       </section>
     </div>

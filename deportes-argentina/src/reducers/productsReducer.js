@@ -1,4 +1,4 @@
-import { FILTER_PRODUCTS, GET_PRODUCTS } from "../types";
+import {  FILTER_PRICE, FILTER_PRODUCTS, GET_PRODUCTS, SEARCH_PRODUCTS, } from "../types";
 
 export const initialState = {
   products: [],
@@ -6,8 +6,11 @@ export const initialState = {
   filters: {
     category: "",
     sport:""
-  }
+  },
+  search: ""
 };
+
+console.log(initialState.search);
 
 export function productsReducer(state = initialState, action) {
   switch (action.type) {
@@ -42,9 +45,45 @@ export function productsReducer(state = initialState, action) {
       );
       return {
         ...state,
-        filterProducts: filtrado,
+        filterProducts: filtrado,  
       };
 
+      case SEARCH_PRODUCTS:
+              
+      
+      const searchProductsFilter = state.products.filter(products => 
+        products.name.toString().toLowerCase().includes(action.payload.toString().toLowerCase()))
+        
+
+        return {
+          ...state,
+          filterProducts: searchProductsFilter
+        }
+
+        case FILTER_PRICE:
+
+         const filterProductsPrice = state.products.filter(productos => {
+          console.log(productos.price);
+          if(!action.payload.priceMin) {
+            return (productos.price < action.payload.priceMax)
+          }
+          if(!action.payload.priceMax) {
+            return (productos.price > action.payload.priceMin)
+          }
+          console.log(action.payload.priceMax);
+          
+          return (productos.price > action.payload.priceMin) && (productos.price < action.payload.priceMax)    
+         });
+
+
+
+ 
+         return {
+          ...state,
+          filterProducts: filterProductsPrice
+         }
+
+        
     default:
       return state;
   }

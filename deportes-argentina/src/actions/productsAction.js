@@ -1,5 +1,5 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore";
-import { FILTER_PRODUCTS, GET_PRODUCTS } from "../types"
+import {  FILTER_PRICE, FILTER_PRODUCTS, GET_PRODUCTS, SEARCH_PRODUCTS } from "../types"
 
 
 
@@ -23,4 +23,19 @@ export function filterProducts( payload ) {
         payload
     }
 }
+
+export function searchProducts( payload ) {
+    return {
+        type: SEARCH_PRODUCTS,
+        payload
+    }
+}
+
+export function filterPriceProducts( payload ) {
+    return {
+        type: FILTER_PRICE,
+        payload
+    }
+}
+
     
