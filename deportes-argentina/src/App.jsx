@@ -8,6 +8,7 @@ import IndexBoxPresent from './Components/PageHome/IndexBoxPresent/IndexBoxPrese
 import IndexButtonsRegist from './Components/PageHome/IndexButtonsRegist/IndexButtonsRegist'
 import NewsContainer from './Components/PageHome/NewsContainer/NewsContainer'
 import OfertsContainer from './Components/PageHome/OfertsContainer/OfertsContainer'
+import ItemDetailConteiner from './Components/PageShop/ItemDetailConteiner/ItemDetailConteiner'
 import ItemListConteiner from './Components/PageShop/ItemListConteiner/ItemListConteiner'
 import SportsHeader from './Components/PageSports/SportsHeader/SportsHeader'
 import SportsList from './Components/PageSports/SportsList/SportsList'
@@ -36,8 +37,7 @@ function App() {
               <Route path='/sports-pages/:sportName' element={ <> <SportsPageList /> </> } />
               <Route path='/sports-pages/football/team' element={ <FootballTeamContainer /> } />
               <Route path='/shop' element={ <ItemListConteiner /> } />
-              <Route path='/shop/:category/' element={ <ItemListConteiner /> } />
-              <Route path='/shop/football/:filter' element={ < ItemListConteiner /> } />
+              <Route path='/detail/:productId' element={ <ItemDetailConteiner /> } />
               <Route path="*" element= { <Navigate to="/"/> } />
               <Route path=''/>
             </Routes>

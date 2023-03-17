@@ -1,0 +1,106 @@
+.detailConteiner {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+    .detailConteiner .detailImage {
+        width: 40%;
+    }
+
+        .detailConteiner .detailImage img {
+            width: 300px;
+            height: 500px;      
+        }
+    
+    .detailConteiner .detailText {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        width: 60%;
+    }
+        .detailConteiner .detailText .detailTextTitle {
+            border-bottom: 2px solid #e3e9ef;
+
+        }
+            .detailConteiner .detailText .detailTextTitle h2{
+                font-size: 5em;
+                font-family: 'Architects Daughter', cursive;
+                margin-bottom: 15px;    
+            }
+
+            .detailConteiner .detailText .detailTextTitle p {
+                font-size: 2em;
+                font-family: 'Roboto', sans-serif;
+                margin-bottom: 15px;
+            }
+
+        .detailConteiner .detailText .detailTextPrice {
+            border-bottom: 2px solid #e3e9ef;
+
+        }
+
+            .detailConteiner .detailText .detailTextPrice p {
+                font-size: 2.5em;
+                font-family: 'Archivo', sans-serif;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            
+            }
+
+        .detailConteiner .detailText .detailStatus {
+            border-bottom: 2px solid #e3e9ef;
+
+        }
+
+
+            .detailConteiner .detailText .detailStatus h4 {
+                font-size: 2.5em;
+                font-family: 'Archivo', sans-serif;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            .detailConteiner .detailText .detailStatus b {
+                color: green;
+                margin-left: 10px;
+            }
+
+        .detailConteiner .detailText .detailTextDescription {
+            border-bottom: 2px solid #e3e9ef;
+        }
+
+        .detailConteiner .detailText .detailTextDescription h4 {
+            font-size: 2.5em;
+            font-family: 'Archivo', sans-serif;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .detailConteiner .detailText .detailTextDescription p {
+            font-size: 2.4em;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .detailConteiner button {
+            margin: 0 auto;
+            margin-top: 20px;
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+            background-color: #2666CF;
+            font-size: 2em;
+            color: #fff;
+        }
+
+        .detailConteiner button:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+

@@ -1,0 +1,103 @@
+.navDetailStyle{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8vh;
+    background-color: #95BDFF;
+}
+
+    .navDetailStyle .navDetailBrand img{
+        text-transform: uppercase;
+        font-weight: bold;
+        height: 54px;
+    }
+
+    .navDetailStyle .navDetailMenu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 3rem;
+    }
+        .navDetailStyle .navDetailMenu .navDetailLink{
+            font-size: 2.5rem;
+            color: black;
+            position: relative;
+            font-family: 'Aboreto', cursive;
+        }
+            .navDetailStyle .navDetailMenu .navDetailLink::before, .navDetailStyle .navDetailMenu .navDetailLink::after {
+                border-bottom: solid 2px #fff;
+                position: absolute;
+                content: "";
+                opacity: 0;
+                transition: 0.3s;
+            }
+        
+            .navDetailStyle .navDetailMenu .navDetailLink::before {
+                bottom: -5px;
+                width: 90%;
+                right: 0;
+            }
+        
+            .navDetailStyle .navDetailMenu .navDetailLink::after {
+                bottom: -10px;
+                left: 0;
+                width: 60%;
+            }
+        
+            .navDetailStyle .navDetailMenu .navDetailLink:hover::before {
+                opacity: 1;
+                width: 70%;
+            }
+        
+            .navDetailStyle .navDetailMenu .navDetailLink:hover::after {
+                opacity: 1;
+                width: 40%;
+        }
+        
+
+    .navDetailStyle .navToggler div{
+        width: 2.5rem;
+        height: 0.2rem;
+        margin: 0.4rem;
+        background-color: black;
+        transition: 0.4s ease-in;
+    }
+
+    .navDetailStyle .navToggler {
+        cursor: pointer;
+        display: none;
+    }
+
+@media (max-width: 768px) {
+
+.navDetailStyle .navToggler {
+    display: block;
+}
+
+.navDetailStyle .navDetailMenu {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    width: 50%;
+    height: 93vh;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+}
+
+}
+
+
+.navDetailStyle .navActive {
+    transform: translateX(0);
+}
+
+.navDetailStyle .toggle .lineOne {
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
+.navDetailStyle .toggle .lineTwo {
+    opacity: 0;
+}
+.navDetailStyle .toggle .lineThree {
+    transform: rotate(45deg) translate(-4px, -5px);
+}
